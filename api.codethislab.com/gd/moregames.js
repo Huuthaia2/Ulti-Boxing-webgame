@@ -101,7 +101,7 @@ function showMoreGames(){
 
 
 function hideMoreGames(){
-    if( document.querySelector("#more-games-button") !== null ){
+    if( document.querySelector("#") !== null ){
         document.querySelector("#more-games-button").style.display = "none";
 
     }
@@ -211,50 +211,50 @@ function checkMoreGames( szGameId,szAlignment ,aTags,aTagsToRemove,iLimit,szColo
         }
 		
 		
-        // var szUrlBut = "https://api.codethislab.com/gd/images/moregames_"+szColor+".png";
-        // var szUrlExitBut = "https://api.codethislab.com/gd/images/moregames_exit_"+szColor+".png";
+        var szUrlBut = "https://api.codethislab.com/gd/images/moregames_"+szColor+".png";
+        var szUrlExitBut = "https://api.codethislab.com/gd/images/moregames_exit_"+szColor+".png";
 		
-        // var elemDiv = document.createElement('div');
-		// elemDiv.id ="more-games-button";
-		// elemDiv.className = szAlignment;
-		// elemDiv.style.cssText = 'background-image:url('+szUrlBut+');';
-		// document.body.appendChild(elemDiv);        
+        var elemDiv = document.createElement('div');
+		elemDiv.id ="more-games-button";
+		elemDiv.className = szAlignment;
+		elemDiv.style.cssText = 'background-image:url('+szUrlBut+');';
+		document.body.appendChild(elemDiv);        
         
 
-        // document.querySelector("#more-games-button").addEventListener("click", function(){
-        //     var szHTML = "<div class='more-games-dialog-wrapper'>";
-        //         szHTML += "<div class='more-games-dialog-block'></div>";
-        //         szHTML += "<div class='more-games-dialog-content'>";
-        //             szHTML += "<div class='more-games-dialog-scrolling'>";
-        //             for( var i = 0; i < aGamesToAdd.length; i++ ){
-        //                 szHTML += "<div class='more-games-dialog-tile' data-url='" + aGamesToAdd[i].url + "'>";
-        //                     szHTML += "<img src='"+aGamesToAdd[i].img+"' />";
-        //                 szHTML += "</div>";
-        //             }
-        //             szHTML += "</div>";
+        document.querySelector("#more-games-button").addEventListener("click", function(){
+            var szHTML = "<div class='more-games-dialog-wrapper'>";
+                szHTML += "<div class='more-games-dialog-block'></div>";
+                szHTML += "<div class='more-games-dialog-content'>";
+                    szHTML += "<div class='more-games-dialog-scrolling'>";
+                    for( var i = 0; i < aGamesToAdd.length; i++ ){
+                        szHTML += "<div class='more-games-dialog-tile' data-url='" + aGamesToAdd[i].url + "'>";
+                            szHTML += "<img src='"+aGamesToAdd[i].img+"' />";
+                        szHTML += "</div>";
+                    }
+                    szHTML += "</div>";
 
                    
-        //             szHTML += "<div class='more-games-dialog-logo'></div>";                      
-        //         szHTML += "</div>";      
-        //         szHTML += "<div class='more-games-dialog-exit' style='background-image:url("+szUrlExitBut+");'>";
-        //         szHTML += "</div>";              
-        //     szHTML += "</div>";
+                    szHTML += "<div class='more-games-dialog-logo'></div>";                      
+                szHTML += "</div>";      
+                szHTML += "<div class='more-games-dialog-exit' style='background-image:url("+szUrlExitBut+");'>";
+                szHTML += "</div>";              
+            szHTML += "</div>";
 
-		// 	document.body.insertAdjacentHTML( 'beforeend', szHTML );
+			document.body.insertAdjacentHTML( 'beforeend', szHTML );
            
 
-        //     setTimeout( function(){
-        //         document.querySelector(".more-games-dialog-block").classList.add("more-games-dialog-block-show");
+            setTimeout( function(){
+                document.querySelector(".more-games-dialog-block").classList.add("more-games-dialog-block-show");
 
-        //         setTimeout( function(){
-        //             document.querySelector(".more-games-dialog-content").classList.add("more-games-dialog-content-show");
-        //             document.querySelector(".more-games-dialog-exit").classList.add("more-games-dialog-exit-show");
-        //         },100);
+                setTimeout( function(){
+                    document.querySelector(".more-games-dialog-content").classList.add("more-games-dialog-content-show");
+                    document.querySelector(".more-games-dialog-exit").classList.add("more-games-dialog-exit-show");
+                },100);
 
-        //     },100);
-        // });
+            },100);
+        });
 
-        // document.querySelector("#more-games-button").style.display = "block";
+        document.querySelector("#more-games-button").style.display = "block";
 
 
     };
@@ -291,12 +291,12 @@ document.addEventListener("DOMContentLoaded", () =>{
 				document.querySelector(".more-games-dialog-content").classList.remove("more-games-dialog-content-show");
 				document.querySelector(".more-games-dialog-exit").classList.remove("more-games-dialog-exit-show");
 				
-				// setTimeout( function(){
-				// 	document.querySelector(".more-games-dialog-block").classList.remove("more-games-dialog-block-show");
-				// 	setTimeout( function(){
-				// 		document.querySelector(".more-games-dialog-wrapper").remove();
-				// 	},500);
-				// },100);      
+				setTimeout( function(){
+					document.querySelector(".more-games-dialog-block").classList.remove("more-games-dialog-block-show");
+					setTimeout( function(){
+						document.querySelector(".more-games-dialog-wrapper").remove();
+					},500);
+				},100);      
 		}
         
     });

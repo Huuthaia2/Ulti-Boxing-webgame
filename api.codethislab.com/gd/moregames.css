@@ -225,6 +225,7 @@
 }
 
 #more-games-button.bottom-left{
+    display: none;
     bottom: 10px;
     left: 10px;
 }
@@ -234,6 +235,7 @@
 }
 
 #more-games-button.bottom-right{
+    display: none;
     bottom: 10px;
     right: 10px;
 }
