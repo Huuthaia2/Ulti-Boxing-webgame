@@ -2384,10 +2384,10 @@ function CGame(c) {
 		S = f
 	};
 	this.getPBlocked = function() {
-		return q
+		return null
 	};
 	this.setPBlocked = function(f) {
-		q = f
+		// q = f
 	};
 	this.getPIsPunching = function() {
 		return k
