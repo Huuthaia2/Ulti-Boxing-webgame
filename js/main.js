@@ -1821,7 +1821,7 @@ function CMain(c, g) {
 	};
 	this.stopUpdate = function() {
 		a = !1;
-		createjs.Ticker.paused = !0;
+		// createjs.Ticker.paused = !0;
 		$("#block_game").css("display", "block");
 		!1 !== DISABLE_SOUND_MOBILE && !1 !== s_bMobile || Howler.mute(!0)
 	};
