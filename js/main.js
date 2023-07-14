@@ -1227,8 +1227,8 @@ window.GD_OPTIONS = {
 	}
 };
 (function(c, g, a) {
-	var b = c.getElementsByTagName(g)[0];
-	c.getElementById(a) || (c = c.createElement(g), c.id = a, c.src = "main.min.js", b.parentNode.insertBefore(c, b))
+	// var b = c.getElementsByTagName(g)[0];
+	// c.getElementById(a) || (c = c.createElement(g), c.id = a, c.src = "main.min.js", b.parentNode.insertBefore(c, b))
 })(document, "script", "gamedistribution-jssdk");
 var s_bAdShown = !1;
 
