@@ -291,12 +291,12 @@ document.addEventListener("DOMContentLoaded", () =>{
 				document.querySelector(".more-games-dialog-content").classList.remove("more-games-dialog-content-show");
 				document.querySelector(".more-games-dialog-exit").classList.remove("more-games-dialog-exit-show");
 				
-				setTimeout( function(){
-					document.querySelector(".more-games-dialog-block").classList.remove("more-games-dialog-block-show");
-					setTimeout( function(){
-						document.querySelector(".more-games-dialog-wrapper").remove();
-					},500);
-				},100);      
+				// setTimeout( function(){
+				// 	document.querySelector(".more-games-dialog-block").classList.remove("more-games-dialog-block-show");
+				// 	setTimeout( function(){
+				// 		document.querySelector(".more-games-dialog-wrapper").remove();
+				// 	},500);
+				// },100);      
 		}
         
     });
