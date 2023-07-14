@@ -1227,8 +1227,8 @@ window.GD_OPTIONS = {
 	}
 };
 (function(c, g, a) {
-	// var b = c.getElementsByTagName(g)[0];
-	// c.getElementById(a) || (c = c.createElement(g), c.id = a, c.src = "main.min.js", b.parentNode.insertBefore(c, b))
+	var b = c.getElementsByTagName(g)[0];
+	c.getElementById(a) || (c = c.createElement(g), c.id = a, c.src = "https://html5.api.gamedistribution.com/main.min.js", b.parentNode.insertBefore(c, b))
 })(document, "script", "gamedistribution-jssdk");
 var s_bAdShown = !1;
 
@@ -1820,10 +1820,10 @@ function CMain(c, g) {
 		h = STATE_HELP
 	};
 	this.stopUpdate = function() {
-		// a = !1;
-		// createjs.Ticker.paused = !0;
-		// $("#block_game").css("display", "block");
-		// !1 !== DISABLE_SOUND_MOBILE && !1 !== s_bMobile || Howler.mute(!0)
+		a = !1;
+		createjs.Ticker.paused = !0;
+		$("#block_game").css("display", "block");
+		!1 !== DISABLE_SOUND_MOBILE && !1 !== s_bMobile || Howler.mute(!0)
 	};
 	this.startUpdate = function() {
 		s_iPrevTime = (new Date).getTime();
@@ -2698,14 +2698,10 @@ function CInterface() {
 		s_oStageInterface.update()
 	};
 	this._onGuardButReleased = function() {
-		s_oGame.getPIsPunching() || s_oGame.getKoP() || (s_oGame.changePlayerState(IDLE),
-        //  s_oGame.setPBlocked(!1),
-          s_oGame.setPGuard(!1))
+		s_oGame.getPIsPunching() || s_oGame.getKoP() || (s_oGame.changePlayerState(IDLE), s_oGame.setPBlocked(!1), s_oGame.setPGuard(!1))
 	};
 	this._onGuardButPressed = function() {
-		s_oGame.getPIsPunching() || s_oGame.getKoP() || (s_oGame.changePlayerState(GUARD),
-        //  s_oGame.setPBlocked(!0),
-          s_oGame.setPGuard(!0))
+		s_oGame.getPIsPunching() || s_oGame.getKoP() || (s_oGame.changePlayerState(GUARD), s_oGame.setPBlocked(!0), s_oGame.setPGuard(!0))
 	};
 	this._onExitButReleased = function() {
 		$("#div_display_id").css("display", "none");
@@ -2919,9 +2915,7 @@ function CPlayer(c, g) {
 		2 === b && s_oGame.reduceStamina(s_aSt_Decrese[JAB]);
 		b++;
 		b > s_aBw_Frame[JAB] - 1 && (q[0].setVisible(!0), this.changeState("idle"),
-			// s_oGame.setPBlocked(!1),
-             
-            s_oGame.setPIsPunching(!1), s_oInterface.setGuardButVisibilty(!0))
+			s_oGame.setPBlocked(!1), s_oGame.setPIsPunching(!1), s_oInterface.setGuardButVisibilty(!0))
 	};
 	this._animHookR = function() {
 		0 === b ? v[0].setVisible(!0) : (v[b - 1].setVisible(!1), v[b].setVisible(!0));
@@ -2929,8 +2923,7 @@ function CPlayer(c, g) {
 		2 === b && s_oGame.reduceStamina(s_aSt_Decrese[HOOK_R]);
 		b++;
 		b > s_aBw_Frame[HOOK_R] - 1 && (q[0].setVisible(!0), this.changeState("idle"),
-			// s_oGame.setPBlocked(!1), 
-            s_oGame.setPIsPunching(!1), s_oInterface.setGuardButVisibilty(!0))
+			s_oGame.setPBlocked(!1), s_oGame.setPIsPunching(!1), s_oInterface.setGuardButVisibilty(!0))
 	};
 	this._animHookL = function() {
 		0 === b ? p[0].setVisible(!0) : (p[b - 1].setVisible(!1), p[b].setVisible(!0));
@@ -2938,8 +2931,7 @@ function CPlayer(c, g) {
 		2 === b && s_oGame.reduceStamina(s_aSt_Decrese[HOOK_L]);
 		b++;
 		b > s_aBw_Frame[HOOK_L] - 1 && (q[0].setVisible(!0), this.changeState("idle"),
-			// s_oGame.setPBlocked(!1), 
-            s_oGame.setPIsPunching(!1), s_oInterface.setGuardButVisibilty(!0))
+			s_oGame.setPBlocked(!1), s_oGame.setPIsPunching(!1), s_oInterface.setGuardButVisibilty(!0))
 	};
 	this._animUppercut = function() {
 		0 === b ? w[0].setVisible(!0) : (w[b - 1].setVisible(!1), w[b].setVisible(!0));
@@ -2947,15 +2939,12 @@ function CPlayer(c, g) {
 		2 === b && s_oGame.reduceStamina(s_aSt_Decrese[UPPERCUT]);
 		b++;
 		b > s_aBw_Frame[UPPERCUT] - 1 && (q[0].setVisible(!0), this.changeState("idle"),
-			// s_oGame.setPBlocked(!1),
-             s_oGame.setPIsPunching(!1), s_oInterface.setGuardButVisibilty(!0))
+			s_oGame.setPBlocked(!1), s_oGame.setPIsPunching(!1), s_oInterface.setGuardButVisibilty(!0))
 	};
 	this._animGetPunched = function() {
 		0 === b ? x[0].setVisible(!0) : (x[b - 1].setVisible(!1), x[b].setVisible(!0));
 		b++;
-		b > s_aBw_Frame[GETPUNCHED] - 1 && (q[0].setVisible(!0), this.changeState("idle"), 
-        // s_oGame.setPBlocked(!1),
-         s_oInterface.setGuardButVisibilty(!0))
+		b > s_aBw_Frame[GETPUNCHED] - 1 && (q[0].setVisible(!0), this.changeState("idle"), s_oGame.setPBlocked(!1), s_oInterface.setGuardButVisibilty(!0))
 	};
 	this._animKo = function() {
 		0 === b ? (s_oInterface.setGuardButVisibilty(!1), y[0].setVisible(!0)) : (y[b - 1].setVisible(!1), y[b].setVisible(!0));
